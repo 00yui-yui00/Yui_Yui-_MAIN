@@ -10,7 +10,7 @@
 
 :root{
   --navy:#061120;
-  --deep:#0b1b31;
+  --deep:#07111d;
   --gold:#c9a76a;
   --ivory:#f3ead7;
   --paper:#efe5d2;
@@ -23,7 +23,9 @@ html{scroll-behavior:smooth}
 body{
   margin:0;
   background:
-    radial-gradient(circle at top,#173657 0%,#071727 46%,#02060c 100%);
+    radial-gradient(circle at 20% 10%,rgba(255,255,255,.035),transparent 24%),
+    radial-gradient(circle at 82% 34%,rgba(201,167,106,.035),transparent 30%),
+    linear-gradient(135deg,#081321 0%,#07111d 45%,#040914 100%);
   color:var(--ivory);
   font-family:"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif;
   line-height:1.9;
@@ -34,10 +36,12 @@ body::before{
   position:fixed;
   inset:0;
   pointer-events:none;
+  opacity:.055;
   background:
-    radial-gradient(circle at 20% 10%,rgba(255,255,255,.045),transparent 22%),
-    radial-gradient(circle at 80% 35%,rgba(201,167,106,.035),transparent 28%);
-  opacity:.65;
+    linear-gradient(115deg,transparent 0%,rgba(255,255,255,.18) 42%,transparent 44%),
+    linear-gradient(35deg,transparent 0%,rgba(255,255,255,.12) 62%,transparent 64%),
+    radial-gradient(circle at 35% 70%,rgba(255,255,255,.12),transparent 18%);
+  mix-blend-mode:screen;
 }
 
 a{
@@ -52,7 +56,7 @@ header{
   justify-content:center;
   text-align:center;
   padding:42px 18px 58px;
-  border-bottom:1px solid rgba(201,167,106,.28);
+  border-bottom:1px solid rgba(201,167,106,.22);
 }
 
 .hero{
@@ -61,7 +65,7 @@ header{
   border:1px solid rgba(201,167,106,.45);
   border-radius:28px;
   padding:48px 24px;
-  background:rgba(3,10,20,.68);
+  background:rgba(3,10,20,.72);
   box-shadow:0 0 44px rgba(0,0,0,.45);
 }
 
@@ -464,7 +468,7 @@ footer{
 
   <p class="lead">
     オーダー・ご相談はXのDMより承っております。<br>
-    色、雰囲気、使用したい石、贈り物などなど、
+    色、雰囲気、使用したい石、贈り物用などなど、
     お気軽にご相談ください。
   </p>
 
