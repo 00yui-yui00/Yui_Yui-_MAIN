@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>-唯結- / YuiYui Handmade Shop</title>
+
+<style>
+*{box-sizing:border-box}
+
+:root{
+  --navy:#061120;
+  --deep:#0b1b31;
+  --gold:#c9a76a;
+  --ivory:#f3ead7;
+  --paper:#efe5d2;
+  --muted:#cbbf9e;
+}
+
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at top,#132f4d 0%,#061120 55%,#02060c 100%);
+  color:var(--ivory);
+  font-family:"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif;
+  line-height:1.9;
+}
+
+a{color:inherit;text-decoration:none}
+
+header{
+  min-height:92vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:48px 22px;
+  border-bottom:1px solid rgba(201,167,106,.35);
+}
+
+.hero{
+  max-width:900px;
+  border:1px solid rgba(201,167,106,.45);
+  border-radius:28px;
+  padding:54px 28px;
+  background:rgba(3,10,20,.62);
+  box-shadow:0 0 40px rgba(0,0,0,.45);
+}
+
+.logo{
+  font-size:48px;
+  letter-spacing:.18em;
+  color:var(--gold);
+  margin-bottom:8px;
+}
+
+.sublogo{
+  letter-spacing:.22em;
+  color:var(--gold);
+  font-size:17px;
+  margin-bottom:32px;
+}
+
+.catch{
+  font-size:18px;
+  max-width:680px;
+  margin:0 auto;
+}
+
+main{
+  max-width:1100px;
+  margin:0 auto;
+  padding:54px 20px 80px;
+}
+
+section{
+  margin-bottom:74px;
+}
+
+h2{
+  color:var(--gold);
+  font-size:30px;
+  text-align:center;
+  letter-spacing:.16em;
+  margin-bottom:28px;
+}
+
+.lead{
+  max-width:760px;
+  margin:0 auto 34px;
+  text-align:center;
+  color:var(--muted);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.card{
+  border:1px solid rgba(201,167,106,.35);
+  border-radius:22px;
+  padding:26px;
+  background:rgba(5,16,30,.78);
+  min-height:260px;
+}
+
+.card.light{
+  background:rgba(239,229,210,.96);
+  color:#152238;
+}
+
+.card h3{
+  color:var(--gold);
+  font-size:24px;
+  margin:0 0 12px;
+  letter-spacing:.12em;
+}
+
+.card.light h3{
+  color:#8d6d32;
+}
+
+.series-img{
+  height:180px;
+  border:1px solid rgba(201,167,106,.35);
+  border-radius:16px;
+  margin-bottom:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:rgba(243,234,215,.55);
+  background:
+    radial-gradient(circle at center,rgba(255,255,255,.08),transparent 45%),
+    #08182b;
+  font-size:14px;
+}
+
+.works{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.work-box{
+  border:1px solid rgba(201,167,106,.28);
+  border-radius:18px;
+  padding:22px;
+  background:rgba(3,10,20,.52);
+}
+
+.work-box h3{
+  color:var(--gold);
+  margin-top:0;
+}
+
+ul{
+  padding-left:1.3em;
+}
+
+.price-table{
+  width:100%;
+  border-collapse:collapse;
+  background:rgba(3,10,20,.58);
+  border:1px solid rgba(201,167,106,.32);
+  border-radius:18px;
+  overflow:hidden;
+}
+
+.price-table th,
+.price-table td{
+  padding:15px 18px;
+  border-bottom:1px solid rgba(201,167,106,.18);
+}
+
+.price-table th{
+  color:var(--gold);
+  text-align:left;
+  background:rgba(201,167,106,.08);
+}
+
+.price-table td:last-child{
+  text-align:right;
+  white-space:nowrap;
+}
+
+.notice{
+  border:1px solid rgba(201,167,106,.35);
+  border-radius:22px;
+  padding:28px;
+  background:rgba(239,229,210,.94);
+  color:#152238;
+}
+
+.notice h3{
+  color:#8d6d32;
+  margin-top:0;
+}
+
+.buttons{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:28px;
+}
+
+.btn{
+  border:1px solid rgba(201,167,106,.65);
+  border-radius:999px;
+  padding:13px 24px;
+  color:var(--navy);
+  background:var(--gold);
+  font-weight:bold;
+}
+
+.btn.sub{
+  color:var(--ivory);
+  background:transparent;
+}
+
+footer{
+  text-align:center;
+  padding:34px 20px;
+  color:rgba(243,234,215,.55);
+  border-top:1px solid rgba(201,167,106,.25);
+  font-size:13px;
+  letter-spacing:.12em;
+}
+
+@media(max-width:800px){
+  .logo{font-size:36px}
+  .grid,.works{grid-template-columns:1fr}
+  .price-table th,.price-table td{display:block;text-align:left}
+  .price-table td:last-child{text-align:left}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="hero">
+    <div class="logo">-唯結-</div>
+    <div class="sublogo">YuiYui Handmade Shop</div>
+    <p class="catch">
+      静かな夜、深い海、言葉にならなかった感情。<br>
+      天然石、硝子、光、香りを使い、<br>
+      “誰かへ届く小さな物語”を制作しています。
+    </p>
+
+    <div class="buttons">
+      <a class="btn" href="#order">Order</a>
+      <a class="btn sub" href="#series">Series</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section id="series">
+  <h2>Series</h2>
+  <p class="lead">
+    -唯結- の作品は、夜と光をめぐる三つのシリーズを中心に展開しています。
+  </p>
+
+  <div class="grid">
+    <article class="card">
+      <div class="series-img">深海電信 image</div>
+      <h3>☾ 深海電信</h3>
+      <p>
+        深海より届く、言葉にならなかった通信。<br>
+        モールス信号や硝子、静かな光を閉じ込めながら、
+        “誰かへ届くもの”をテーマに制作しています。
+      </p>
+    </article>
+
+    <article class="card light">
+      <div class="series-img">月灯標本 image</div>
+      <h3>☾ 月灯標本</h3>
+      <p>
+        月明かりの欠片を、そっと標本として保存するシリーズ。<br>
+        淡い光、硝子、銀色、静かな夜の気配を閉じ込めた
+        標本作品を制作しています。
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="series-img">夜光採集 image</div>
+      <h3>☾ 夜光採集</h3>
+      <p>
+        夜にだけ見つけられる、小さな光を集めるシリーズ。<br>
+        深い青、微かな反射、夜更けの空気を纏わせながら、
+        夜の採集物のような作品を制作しています。
+      </p>
+    </article>
+  </div>
+</section>
+
+<section>
+  <h2>Works</h2>
+
+  <div class="works">
+    <div class="work-box">
+      <h3>Accessory</h3>
+      <ul>
+        <li>天然石ブレスレット</li>
+        <li>ビジューブレスレット</li>
+        <li>ピアス / イヤリング</li>
+        <li>バッグチャーム</li>
+        <li>ネックレス</li>
+      </ul>
+    </div>
+
+    <div class="work-box">
+      <h3>Interior / Fragrance</h3>
+      <ul>
+        <li>キャンバスフラワーアート</li>
+        <li>サンキャッチャー</li>
+        <li>フレグランス（オーダーのみ）</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Price</h2>
+
+  <table class="price-table">
+    <tr><th>作品</th><th>フルオーダー価格</th></tr>
+    <tr><td>天然石ブレスレット</td><td>￥5,500〜</td></tr>
+    <tr><td>フレグランス 10ml</td><td>￥4,000〜</td></tr>
+    <tr><td>キャンバスフラワーアート</td><td>￥3,500〜</td></tr>
+    <tr><td>ピアス / イヤリング / ビジューブレスレット</td><td>￥2,500〜</td></tr>
+    <tr><td>サンキャッチャー</td><td>￥2,500〜</td></tr>
+    <tr><td>ネックレス</td><td>￥1,800〜</td></tr>
+    <tr><td>バッグチャーム</td><td>￥1,500〜</td></tr>
+  </table>
+
+  <p class="lead">
+    ※すべて送料￥500込み。<br>
+    複数購入の場合、2点目以降は送料分をお値引きいたします。
+  </p>
+</section>
+
+<section>
+  <h2>Special Box</h2>
+
+  <div class="notice">
+    <h3>☾ 夜海の福箱 ☾</h3>
+    <p>
+      天然石ブレスレット / キャンバスフラワーアート または フレグランス /
+      ピアス または イヤリング / ネックレス /
+      バッグチャーム または ビジューブレスレット。
+    </p>
+    <p>
+      合計5点セット：￥12,000〜14,000
+    </p>
+    <p>
+      天然石ブレスレットは￥5,500〜￥7,500の範囲で制作いたします。
+      ご希望のご予算はオーダー時にお伺いいたします。
+    </p>
+    <p>
+      通常より最大約￥4,300お得な特別セットです。
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>Free Prize</h2>
+
+  <div class="notice">
+    <p>
+      -唯結- では、すべてのご注文へ
+      フリープライズを同封しております。
+    </p>
+    <p>
+      内容はその時々によって異なります。<br>
+      開封してからのお楽しみとして、
+      “小さな夜の贈り物”を一緒にお届けいたします。
+    </p>
+    <p>
+      ご購入金額に応じて、内容や点数が変化いたします。<br>
+      ￥12,000以上ご購入の場合は、
+      より特別なフリープライズをお付けしております。
+    </p>
+  </div>
+</section>
+
+<section id="order">
+  <h2>Order</h2>
+
+  <p class="lead">
+    オーダー・ご相談はDMより承っております。<br>
+    色、雰囲気、使用したい石、贈り物用途など、
+    お気軽にご相談ください。
+  </p>
+
+  <div class="buttons">
+    <a class="btn" href="https://x.com/" target="_blank">X / DM</a>
+    <a class="btn sub" href="https://minne.com/" target="_blank">minne</a>
+    <a class="btn sub" href="https://00yui-yui00.github.io/shinkai-denshin/" target="_blank">深海電信 解読室</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  -唯結- / YuiYui Handmade Shop<br>
+  FROM THE DEEP SEA
+</footer>
+
+</body>
+</html>
